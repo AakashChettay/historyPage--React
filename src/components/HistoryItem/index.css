@@ -1,0 +1,98 @@
+/* HistoryItem Component CSS */
+
+.history {
+  display: flex;
+  padding: 12px 20px;
+  background-color: transparent;
+  border: none; /* Remove border */
+  margin-bottom: 16px;
+  margin-right: 20px;
+}
+
+.delBtn {
+  margin-left: auto;
+  background-color: transparent;
+  border-style: none;
+}
+
+.hlogo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px; /* Adjusted margin */
+}
+
+.history .time {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 700;
+  margin-right: 25px;
+  width: 100px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Adjusted alignment */
+  width: 100%; /* Ensure the container takes full width */
+}
+
+.logoContainer .txtContainer {
+  margin-left: 16px;
+}
+
+.txtContainer {
+  display: flex; /* Adjusted direction for small screens */
+}
+
+.txtContainer .title {
+  font-size: 16px;
+  color: #475569;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.txtContainer .domain {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.deleteLogo {
+  outline: none; /* Push delete logo to rightmost position */
+}
+
+@media (max-width: 767px) {
+  .history {
+    flex-direction: column;
+  }
+  .txtContainer {
+    flex-direction: column;
+  }
+  .txtContainer .title {
+    margin-bottom: 2px;
+  }
+  .txtContainer .domain {
+    margin-top: 2px;
+  }
+  .hlogo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .history {
+    flex-direction: row;
+  }
+  .txtContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Add align-items to center vertically */
+  }
+  .txtContainer .title {
+    padding-right: 10px; /* Adjust padding for title */
+  }
+  .txtContainer .domain {
+    margin-left: 10px; /* Adjust margin for domain */
+  }
+}
